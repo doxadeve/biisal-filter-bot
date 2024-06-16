@@ -74,9 +74,9 @@ REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", 1))
 
-DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://gafobey331:JCOpVBArEU8rdbo6@cluster0.iqtnjjb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-if len(DATABASE_URL) == 0:
-    print('Error - DATABASE_URL is missing, exiting now')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://gafobey331:JCOpVBArEU8rdbo6@cluster0.iqtnjjb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+if len(DATABASE_URI) == 0:
+    print('Error - DATABASE_URI is missing, exiting now')
     exit()
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files14')
